@@ -34,7 +34,7 @@ echo "Do you want to generate a new GPG key associated with your Apache account?
 read confirmation
 if [[ $confirmation = "y" ]]; then
   echo "===============Generating new GPG key================"
-  sudo apt-get install rng-tools
+  sudo apt-get --no-install-recommends install rng-tools
   sudo rngd -r /dev/urandom
   gpg --full-generate-key
 fi
