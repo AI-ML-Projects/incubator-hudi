@@ -42,7 +42,7 @@ RUN echo "Installing Spark-version (${SPARK_VERSION})" \
 
 # Install python3 to enable and use pyspark shell
 RUN apt-get update \
-    && apt-get -yq install python3 \
+    && apt-get --no-install-recommends -yq install python3 \
     && ln -sf $(which python3) /usr/bin/python \
     && rm -rf /var/lib/apt/lists/*
 

@@ -36,7 +36,7 @@ ENV PATH        $PATH:${PRESTO_HOME}/bin
 
 RUN set -x \
     && DEBIAN_FRONTEND=noninteractive apt-get -yq update \
-    && apt-get -yq install \
+    && apt-get --no-install-recommends install \
         bash \
         less \
         python \
